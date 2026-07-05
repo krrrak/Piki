@@ -19,8 +19,6 @@ Kirigami.ApplicationWindow {
     pageStack.anchors.leftMargin: sidebar.layoutWidth
 
     property string currentPage: pageStack.currentItem?.title ?? ""
-    property var _navHistory: []
-    property int _navIndex: -1
     property bool fullscreenActive: false
 
     property var _compCache: ({})
@@ -32,15 +30,12 @@ Kirigami.ApplicationWindow {
         return _compCache[name].createObject(parent, data);
     }
     function navigateToPageParm(name, data) {
-        if (_navIndex < _navHistory.length - 1)
-            _navHistory = _navHistory.slice(0, _navIndex + 1);
-        _navHistory.push({name: name, data: data});
-        _navIndex = _navHistory.length - 1;
+        // Trim forward pages before pushing new one
+        while (pageStack.currentIndex < pageStack.depth - 1)
+            pageStack.pop();
         pageStack.push(buildObject(name, data, this));
     }
     function navigateToFeed(name, data) {
-        _navHistory = [{name: name, data: data}];
-        _navIndex = 0;
         pageStack.clear();
         pageStack.push(buildObject(name, data, this));
     }
@@ -48,17 +43,12 @@ Kirigami.ApplicationWindow {
         navigateToPageParm(name, {});
     }
     function goBack() {
-        if (_navIndex > 0) {
-            _navIndex--;
-            pageStack.pop();
-        }
+        if (pageStack.currentIndex > 0)
+            pageStack.currentIndex--;
     }
     function goForward() {
-        if (_navIndex < _navHistory.length - 1) {
-            _navIndex++;
-            let entry = _navHistory[_navIndex];
-            pageStack.push(buildObject(entry.name, entry.data, this));
-        }
+        if (pageStack.currentIndex < pageStack.depth - 1)
+            pageStack.currentIndex++;
     }
     function loggedIn(response) {
         let json = JSON.parse(response);
@@ -68,8 +58,6 @@ Kirigami.ApplicationWindow {
                 LoginHandler.SaveUserToCache(JSON.stringify(json["user"]), piqi).then(() => {
                     pageStack.pop();
                     pageStack.pop();
-                    _navHistory = [];
-                    _navIndex = -1;
 
                     piqi.RecommendedFeed("illust", true, true).then(recommended => {
                         // Cache.SynchroniseIllusts(recommended.illusts);
