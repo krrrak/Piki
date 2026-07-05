@@ -10,3 +10,9 @@ local/
 .gitl
 flatpak-build/
 .zed/
+dist/
+src/Piki/
+src/Piqi/
+*.msi
+*.exe
+*.7z
