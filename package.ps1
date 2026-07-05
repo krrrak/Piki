@@ -71,6 +71,26 @@ foreach ($d in $dlls) {
     if (Test-Path $src) { Copy-Item $src $DistDir -Force }
 }
 
+Write-Host "=== Step 3b: Copy transitive runtime DLLs ==="
+$runtimes = @(
+    "libintl-8.dll","libdbus-1-3.dll",
+    "libpcre2-16-0.dll","libpcre2-8-0.dll",
+    "libzstd.dll","zlib1.dll",
+    "libsqlite3-0.dll",
+    "libb2-1.dll","libbrotlidec.dll","libbrotlicommon.dll",
+    "libdouble-conversion.dll",
+    "libfreetype-6.dll","libharfbuzz-0.dll",
+    "libpng16-16.dll","libjpeg-8.dll",
+    "libwebp-7.dll","libwebpdemux-2.dll","libwebpmux-3.dll",
+    "libtiff-6.dll","libjasper.dll","libmng-2.dll","libmd4c.dll",
+    "libicuin78.dll","libicuuc78.dll",
+    "libgio-2.0-0.dll","libglib-2.0-0.dll","libgobject-2.0-0.dll","libgmodule-2.0-0.dll","libffi-8.dll"
+)
+foreach ($d in $runtimes) {
+    $src = "$QtBin/$d"
+    if (Test-Path $src) { Copy-Item $src $DistDir -Force }
+}
+
 Write-Host "=== Step 4: Copy ALL system QML modules ==="
 Get-ChildItem $QmlDir -Directory | ForEach-Object {
     Copy-Item -Recurse $_.FullName "$DistDir/qml/$($_.Name)" -Force
