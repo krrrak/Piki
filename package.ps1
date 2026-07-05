@@ -64,7 +64,7 @@ $dlls = @(
     "libKirigamiDelegates.dll","libKirigamiDialogs.dll","libKirigamiLayouts.dll",
     "libKirigamiTemplates.dll","libKirigamiPrimitives.dll",
     "piqi.dll","libqt6keychain.dll","libfuturesql6.dll",
-    "libc++.dll","libunwind.dll"
+    "libc++.dll","libunwind.dll","purposeprocess.exe"
 )
 foreach ($d in $dlls) {
     $src = "$QtBin/$d"
