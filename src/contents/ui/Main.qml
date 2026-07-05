@@ -30,9 +30,20 @@ Kirigami.ApplicationWindow {
         return _compCache[name].createObject(parent, data);
     }
     function navigateToPageParm(name, data) {
+        let oldIdx = pageStack.currentIndex;
+        while (pageStack.depth > oldIdx + 1) {
+            pageStack.currentIndex = pageStack.depth - 1;
+            let doomed = pageStack.currentItem;
+            pageStack.pop();
+            if (doomed) doomed.destroy();
+        }
         pageStack.push(buildObject(name, data, this));
     }
     function navigateToFeed(name, data) {
+        for (let i = pageStack.depth - 1; i >= 0; i--) {
+            let page = pageStack.get(i);
+            if (page) page.destroy();
+        }
         pageStack.clear();
         pageStack.push(buildObject(name, data, this));
     }
@@ -53,8 +64,8 @@ Kirigami.ApplicationWindow {
         LoginHandler.SetUser(json["user"]["account"]).then(() => {
             LoginHandler.WriteToken(json["refresh_token"]).then(() => {
                 LoginHandler.SaveUserToCache(JSON.stringify(json["user"]), piqi).then(() => {
-                    pageStack.pop();
-                    pageStack.pop();
+                    let p1 = pageStack.currentItem; pageStack.pop(); if (p1) p1.destroy();
+                    let p2 = pageStack.currentItem; pageStack.pop(); if (p2) p2.destroy();
 
                     piqi.RecommendedFeed("illust", true, true).then(recommended => {
                         // Cache.SynchroniseIllusts(recommended.illusts);
