@@ -47,7 +47,7 @@ Rectangle {
                         reloadingAccount = false;
                         accountDialog.close();
                         sidebar.collapsed = true;
-                        navigateToFeed("Welcome", {
+                        navigateToPageParm("Welcome", {
                             wkt: walkthrough
                         });
                     });
@@ -111,7 +111,7 @@ Rectangle {
                     onClicked: {
                         loading = true;
                         piqi.RecommendedFeed("illust", true, true).then(recommended => {
-                            navigateToFeed("Home", {
+                            navigateToPageParm("Home", {
                                 feed: recommended
                             });
                             loading = false;
@@ -130,7 +130,7 @@ Rectangle {
                     onClicked: {
                         loading = true;
                         piqi.FollowingFeed("all").then(following => {
-                            navigateToFeed("Following", {
+                            navigateToPageParm("Following", {
                                 feed: following
                             });
                             loading = false;
@@ -145,7 +145,7 @@ Rectangle {
                     onClicked: {
                         loading = true;
                         piqi.WatchlistFeed().then(wtl => {
-                            navigateToFeed("Watchlist", {
+                            navigateToPageParm("Watchlist", {
                                 feed: wtl
                             });
                             loading = false;
@@ -168,7 +168,7 @@ Rectangle {
                         loading = true;
                         piqi.LatestGlobal("illust").then(latest => {
                             // Cache.SynchroniseIllusts(latest.illusts);
-                            navigateToFeed("Newest", {
+                            navigateToPageParm("Newest", {
                                 feed: latest
                             });
                             loading = false;
@@ -189,7 +189,7 @@ Rectangle {
                         loading = true;
                         piqi.BookmarksFeed(null, false).then(bkmarks => {
                             // Cache.SynchroniseIllusts(bkmarks.illusts);
-                            navigateToFeed("Collection", {
+                            navigateToPageParm("Collection", {
                                 feed: bkmarks
                             });
                             loading = false;
@@ -221,7 +221,7 @@ Rectangle {
             onClicked: {
                 loading = true;
                 piqi.Details(piqi.user).then(dtls => {
-                    root.navigateToFeed("ProfileView", {
+                    root.navigateToPageParm("ProfileView", {
                         details: dtls
                     });
                     loading = false;
@@ -243,7 +243,7 @@ Rectangle {
         SidebarButton {
             text: i18n("Settings")
             icon.name: "configure"
-            onClicked: root.navigateToFeed("Settings", {})
+            onClicked: root.navigateToPageParm("Settings", {})
         }
     }
 
