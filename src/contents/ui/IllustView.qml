@@ -65,6 +65,19 @@ Kirigami.Page {
             });
     }
 
+    Connections {
+        target: root.pageStack
+        function onCurrentItemChanged() {
+            if (root.pageStack.currentItem !== page) {
+                mainImage.source = "";
+                pagesView.visible = false;
+            } else {
+                mainImage.source = illust.metaSinglePage;
+                pagesView.visible = page.illust.pageCount > 1;
+            }
+        }
+    }
+
     Controls.SplitView {
         id: view
         anchors.fill: parent
