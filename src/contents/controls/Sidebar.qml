@@ -113,7 +113,7 @@ Rectangle {
                     onClicked: {
                         loading = true;
                         piqi.RecommendedFeed("illust", true, true).then(recommended => {
-                            navigateToPageParm("Home", {
+                            navigateToFeed("Home", {
                                 feed: recommended
                             });
                             loading = false;
