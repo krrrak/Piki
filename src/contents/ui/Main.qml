@@ -129,7 +129,7 @@ Kirigami.ApplicationWindow {
     }
     header: Header {
         id: hd
-        visible: !sidebar.collapsed
+        visible: true
     }
     function getHeaderQuery() {
         const tgs = hd.selectedTags;
@@ -141,7 +141,7 @@ Kirigami.ApplicationWindow {
     }
 
     Kirigami.Separator {
-        visible: !sidebar.collapsed
+        visible: true
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
