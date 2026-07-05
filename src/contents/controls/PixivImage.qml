@@ -9,6 +9,7 @@ Image {
     id: px
     asynchronous: true
     retainWhileLoading: true
+    cache: true
 
     Rectangle {
         z: 1

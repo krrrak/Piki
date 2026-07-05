@@ -20,6 +20,7 @@ Rectangle {
     PixivImage {
         visible: fsv.pageCount <= 1
         source: fsv.metaSinglePage
+        sourceSize: Qt.size(width, height)
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
     }
@@ -36,6 +37,7 @@ Rectangle {
         delegate: PixivImage {
             required property var modelData
             source: modelData.original
+            sourceSize: Qt.size(ListView.view.width, ListView.view.height)
             fillMode: Image.PreserveAspectFit
             width: ListView.view.width
             height: ListView.view.height
