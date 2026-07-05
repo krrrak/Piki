@@ -119,7 +119,22 @@ Item {
             }
         }
 
+        Controls.Label {
+            id: resLabel
+            anchors {
+                right: forwardBtn.left
+                verticalCenter: parent.verticalCenter
+                rightMargin: 10
+            }
+            visible: root.pageStack.currentItem?.illust?.width !== undefined
+            text: (root.pageStack.currentItem?.illust?.width ?? "") + " × " + (root.pageStack.currentItem?.illust?.height ?? "")
+            font.pointSize: 10
+            opacity: 0.7
+            color: Kirigami.Theme.textColor
+        }
+
         Controls.Button {
+            id: forwardBtn
             icon.name: "go-next"
             icon.width: 24
             icon.height: 24
