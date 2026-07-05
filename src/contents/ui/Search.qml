@@ -37,7 +37,6 @@ FeedPage {
         refresh();
     }
     property variant searchRequest
-    property variant feed
 
     function refresh() {
         if (!feed)
@@ -153,20 +152,6 @@ FeedPage {
             Layout.fillWidth: true
         }
     ]
-
-    GridLayout {
-        rowSpacing: 15
-        columnSpacing: 15
-        columns: Math.floor((page.width - 25) / 190)
-
-        Repeater {
-            model: page.feed
-            IllustrationButton {
-                required property var modelData
-                illust: modelData
-            }
-        }
-    }
 
     Controls.Label {
         visible: !piqi.user.isPremium && page.sorting == "popular"
