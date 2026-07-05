@@ -86,6 +86,12 @@ if (Test-Path $purposeData) {
     Copy-Item -Recurse $purposeData "$DistDir/data/kf6/purpose" -Force
 }
 
+Write-Host "=== Step 6b: Copy Purpose plugin DLLs ==="
+$purposePlugins = "$Msys2Root/$MsysEnv/share/qt6/plugins/kf6/purpose"
+if (Test-Path $purposePlugins) {
+    Copy-Item -Recurse $purposePlugins "$DistDir/kf6/purpose" -Force
+}
+
 Write-Host "=== Step 7: qt.conf ==="
 @"
 [Paths]
