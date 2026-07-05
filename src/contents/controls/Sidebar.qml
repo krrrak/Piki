@@ -10,9 +10,9 @@ import io.github.micro.piqi
 
 Rectangle {
     id: sidebar
-    width: 250
+    width: collapsed ? 60 : 250
     clip: true
-    x: collapsed ? -(width - 60) : 0
+    x: 0
     color: "transparent"
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -22,7 +22,7 @@ Rectangle {
     readonly property string currentPage: root.currentPage
     property bool collapsed: true
 
-    Behavior on x {
+    Behavior on width {
         NumberAnimation { easing.type: Easing.OutCubic; duration: 200 }
     }
 
