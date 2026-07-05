@@ -128,15 +128,15 @@ Kirigami.Page {
                 }
             }
 
-            Controls.ToolButton {
+            Controls.RoundButton {
                 anchors {
                     top: parent.top
                     right: parent.right
                     margins: Kirigami.Units.mediumSpacing
                 }
-                icon.name: "view-fullscreen"
-                icon.width: 20
-                icon.height: 20
+                width: Kirigami.Units.gridUnit * 2
+                height: Kirigami.Units.gridUnit * 2
+                flat: true
                 onClicked: root.showFullscreen(
                     page.illust.metaPages,
                     page.illust.metaSinglePage,
@@ -146,6 +146,14 @@ Kirigami.Page {
                     color: Kirigami.Theme.backgroundColor
                     opacity: 0.7
                     radius: width / 2
+                }
+                contentItem: Item {
+                    Controls.Label {
+                        anchors.centerIn: parent
+                        text: "\u26F6"
+                        color: Kirigami.Theme.textColor
+                        font.pixelSize: 14
+                    }
                 }
             }
         }
