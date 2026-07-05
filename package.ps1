@@ -5,7 +5,6 @@ param(
     [string]$QmlDir = "C:/msys64/clangarm64/share/qt6/qml"
 )
 
-$ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $DistDir = "$ScriptDir/$OutDir/Piki"
 New-Item -ItemType Directory -Path $DistDir -Force | Out-Null
@@ -14,7 +13,7 @@ Write-Host "=== Step 1: Copy piki.exe ==="
 Copy-Item "$ScriptDir/$BuildDir/bin/piki.exe" $DistDir -Force
 
 Write-Host "=== Step 2: windeployqt ==="
-& "$QtBin/windeployqt.exe" --release "$DistDir/piki.exe" 2>&1 | Out-Null
+$null = & "$QtBin/windeployqt.exe" --release "$DistDir/piki.exe" 2>&1
 
 Write-Host "=== Step 3: Copy KF6/Piqi/QCoro DLLs ==="
 $dlls = @(
