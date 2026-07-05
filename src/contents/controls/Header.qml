@@ -101,7 +101,7 @@ Item {
             }
             spacing: 2
 
-            Controls.Button {
+            Controls.ToolButton {
                 icon.name: "go-previous"
                 icon.width: 24
                 icon.height: 24
@@ -133,7 +133,7 @@ Item {
             color: Kirigami.Theme.textColor
         }
 
-        Controls.Button {
+        Controls.ToolButton {
             id: forwardBtn
             icon.name: "go-next"
             icon.width: 24

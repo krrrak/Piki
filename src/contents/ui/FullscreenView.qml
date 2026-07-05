@@ -42,16 +42,15 @@ Rectangle {
         }
     }
 
-    Controls.RoundButton {
+    Controls.ToolButton {
         anchors {
             top: parent.top
             right: parent.right
             margins: Kirigami.Units.mediumSpacing
         }
-        width: Kirigami.Units.gridUnit * 2
-        height: Kirigami.Units.gridUnit * 2
-        flat: true
-        text: "\u2715"
+        icon.name: "dialog-close"
+        icon.width: 20
+        icon.height: 20
         onClicked: fsv.close()
     }
 
