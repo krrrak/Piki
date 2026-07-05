@@ -110,6 +110,7 @@ kconfig_add_kcfg_files(piki_st GENERATE_MOC pikiconfig.kcfgc)
 add_executable(piki
     pixivnamfactory.h
     main.cpp
+    appicon.rc
 )
 target_link_libraries(piki PUBLIC piki_st piki_stplugin)
 
