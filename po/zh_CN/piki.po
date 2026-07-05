@@ -1,0 +1,492 @@
+# Copyright (C) 2025
+# This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2025 Micro <microgamercz@proton.me>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: piki\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-20\n"
+"PO-Revision-Date: 2025-08-21\n"
+"Last-Translator: Micro <microgamercz@proton.me>\n"
+"Language: zh_CN\\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: src/contents/controls/Sidebar.qml:88 src/contents/ui/Settings.qml:111
+msgid "Home"
+msgstr "首页"
+
+#: src/contents/controls/Sidebar.qml:108
+#: src/contents/controls/IllustViewProfileCard.qml:39
+#: src/contents/ui/ProfileView.qml:167 src/contents/ui/ProfileView.qml:199
+#: src/contents/ui/Settings.qml:115
+msgid "Following"
+msgstr "关注"
+
+#: src/contents/controls/Sidebar.qml:123 src/contents/ui/Settings.qml:119
+msgid "Watchlist"
+msgstr "追番"
+
+#: src/contents/controls/Sidebar.qml:138 src/contents/ui/Settings.qml:123
+msgid "My pixiv"
+msgstr "我的 Pixiv"
+
+#: src/contents/controls/Sidebar.qml:145 src/contents/ui/Settings.qml:129
+#: src/contents/ui/Search.qml:74
+msgid "Newest"
+msgstr "最新"
+
+#: src/contents/controls/Sidebar.qml:166 src/contents/ui/Settings.qml:133
+msgid "Bookmarks"
+msgstr "收藏"
+
+#: src/contents/controls/Sidebar.qml:182 src/contents/ui/History.qml:17
+#: src/contents/ui/Settings.qml:137
+msgid "History"
+msgstr "历史"
+
+#: src/contents/controls/Sidebar.qml:226 src/contents/ui/Settings.qml:15
+msgid "Settings"
+msgstr "设置"
+
+#: src/contents/controls/AccountsManager.qml:14
+msgid "Accounts"
+msgstr ""
+
+#: src/contents/controls/AccountsManager.qml:64
+msgid "Add account"
+msgstr ""
+
+#: src/contents/controls/RequestsCard.qml:26
+msgid "Accepting requests"
+msgstr ""
+
+#: src/contents/controls/templates/FeedPage.qml:87
+msgid "Failed to load"
+msgstr "加载失败"
+
+#: src/contents/controls/SeriesChapterCard.qml:28
+msgid "%1 page"
+msgid_plural "%1 pages"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/contents/controls/WallpaperSelections.qml:25
+msgid "Proceed"
+msgstr ""
+
+#: src/contents/controls/WallpaperSelections.qml:60
+msgid "R-18 work!"
+msgstr ""
+
+#: src/contents/controls/WallpaperSelections.qml:65
+msgid ""
+"Warning! This work is marked as %1! Do you want to set this image as your "
+"wallpaper?"
+msgstr ""
+
+#: src/contents/controls/WallpaperSelections.qml:86
+msgid "Which image should be used for the wallpaper?"
+msgstr ""
+
+#: src/contents/controls/WallpaperSelections.qml:115
+msgid "Which monitor should have the wallpaper?"
+msgstr ""
+
+#: src/contents/controls/IllustViewProfileCard.qml:39
+#: src/contents/ui/ProfileView.qml:199
+msgid "Follow"
+msgstr ""
+
+#: src/contents/controls/XWorkAsWallpaperOptions.qml:18
+msgid "Yes"
+msgstr ""
+
+#: src/contents/controls/XWorkAsWallpaperOptions.qml:18
+msgid "Always Ask"
+msgstr ""
+
+#: src/contents/controls/XWorkAsWallpaperOptions.qml:21
+msgid "Yes (never show again)"
+msgstr ""
+
+#: src/contents/controls/XWorkAsWallpaperOptions.qml:25
+msgid "No"
+msgstr ""
+
+#: src/contents/controls/XWorkAsWallpaperOptions.qml:28
+msgid "No (disable for restricted works)"
+msgstr ""
+
+#: src/contents/controls/SeriesButton.qml:43
+msgid "%1 work"
+msgid_plural "%1 works"
+msgstr[0] "%1 膷谩st"
+msgstr[1] "%1 膷谩sti" # TODO: opravit chybu u mno啪n茅ho tvaru pro 5 a v铆ce 膷谩st脥 :)
+
+#: src/contents/controls/CommentCard.qml:61
+msgid "Author"
+msgstr "作者"
+
+#: src/contents/controls/CommentCard.qml:91
+msgid "Reply"
+msgstr "回复"
+
+#: src/contents/controls/Header.qml:322
+msgid "Search..."
+msgstr "搜索..."
+
+#: src/contents/controls/CommentSection.qml:73
+msgid "Comments"
+msgstr "评论"
+
+#: src/contents/ui/Home.qml:16
+msgid "Home 銉?%1"
+msgstr ""
+
+#: src/contents/ui/Home.qml:46 src/contents/ui/ProfileView.qml:429
+#: src/contents/ui/Newest.qml:45
+msgid "Illustrations"
+msgstr ""
+
+#: src/contents/ui/Home.qml:50 src/contents/ui/ProfileView.qml:433
+#: src/contents/ui/Newest.qml:49 src/contents/ui/Watchlist.qml:41
+msgid "Manga"
+msgstr ""
+
+#: src/contents/ui/Home.qml:54 src/contents/ui/Newest.qml:53
+#: src/contents/ui/Watchlist.qml:41
+msgid "Novel"
+msgstr ""
+
+#: src/contents/ui/Home.qml:80
+msgid "Rankings"
+msgstr ""
+
+#: src/contents/ui/Loading.qml:110
+msgid "Missing keyring"
+msgstr ""
+
+#: src/contents/ui/Loading.qml:111
+msgid ""
+"Failed to open keyring implementing 'org.freedesktop.secrets' api (eg. "
+"KWallet, Gnome Keyring)\n"
+"Piki will work with a single account logged in, without storing session "
+"after Piki is closed"
+msgstr ""
+
+#: src/contents/ui/IllustView.qml:235
+msgid "Set as wallpaper"
+msgstr ""
+
+#: src/contents/ui/IllustView.qml:258
+msgid "Next Chapter:"
+msgstr ""
+
+#: src/contents/ui/IllustView.qml:273
+msgid "Previous Chapter:"
+msgstr ""
+
+#: src/contents/ui/IllustView.qml:288 src/contents/ui/Series.qml:71
+msgid "In your watchlist"
+msgstr "已在追番中"
+
+#: src/contents/ui/IllustView.qml:288 src/contents/ui/Series.qml:71
+msgid "Add to watchlist"
+msgstr "加入追番"
+
+#: src/contents/ui/IllustView.qml:302
+msgid "Series"
+msgstr "系列"
+
+#: src/contents/ui/ProfileView.qml:210
+msgid "My pixiv request"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:214
+msgid "Recommended Users"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:349
+msgid "Gender"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:360
+msgid "Male"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:362
+msgid "Female"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:369
+msgid "Age"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:375
+msgid "Birthday"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:387
+msgid "Computer"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:393
+msgid "Software used"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:399
+msgid "Graphic tablet"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:437
+msgid "Manga series"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:441 src/contents/ui/Following.qml:44
+msgid "Novels"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:445
+msgid "Illustrations / Manga (Bookmarks)"
+msgstr ""
+
+#: src/contents/ui/ProfileView.qml:449
+msgid "Novels (Bookmarks)"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:16
+msgid "Permanent cache is disabled"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:16
+msgid "Only the image variant with the highest definition is cached permanently"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:16
+msgid "All images are cached"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:16
+msgid "All images, and illust/profile data is cached"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:20
+msgid "General"
+msgstr "常规"
+
+#: src/contents/ui/Settings.qml:26
+msgid "Cache level"
+msgstr "缓存级别"
+
+#: src/contents/ui/Settings.qml:30
+msgid "None"
+msgstr "无"
+
+#: src/contents/ui/Settings.qml:38
+msgid "Optimised"
+msgstr "优化"
+
+#: src/contents/ui/Settings.qml:46
+msgid "Images"
+msgstr "仅图片"
+
+#: src/contents/ui/Settings.qml:54
+msgid "Everything"
+msgstr "全部"
+
+#: src/contents/ui/Settings.qml:73
+msgid "Maximum cache size"
+msgstr "最大缓存大小"
+
+#: src/contents/ui/Settings.qml:94
+msgid "Unlimited"
+msgstr "无限制"
+
+#: src/contents/ui/Settings.qml:103
+msgid "Defaults"
+msgstr ""
+
+#: src/contents/ui/Settings.qml:108
+msgid "Startup page"
+msgstr "启动页"
+
+#: src/contents/ui/Settings.qml:152
+msgid "R-18/R-18G wallpapers"
+msgstr "R-18/R-18G 壁纸"
+
+#: src/contents/ui/Settings.qml:153
+msgid "Default settings for 'Set wallpaper' behaviour for age restricted works"
+msgstr ""
+
+#: src/contents/ui/Search.qml:78
+msgid "Popular"
+msgstr ""
+
+#: src/contents/ui/Search.qml:82
+msgid "Oldest"
+msgstr ""
+
+#: src/contents/ui/Search.qml:98
+msgid "Partial tag match"
+msgstr "部分标签匹配"
+
+#: src/contents/ui/Search.qml:102
+msgid "Perfect tag match"
+msgstr "精确标签匹配"
+
+#: src/contents/ui/Search.qml:106
+msgid "Title, description"
+msgstr "标题和描述"
+
+#: src/contents/ui/Search.qml:120
+msgid "All periods"
+msgstr "全部时段"
+
+#: src/contents/ui/Search.qml:124
+msgid "24 hours"
+msgstr "24小时"
+
+#: src/contents/ui/Search.qml:128
+msgid "One Week"
+msgstr "一周"
+
+#: src/contents/ui/Search.qml:132
+msgid "One Month"
+msgstr "一个月"
+
+#: src/contents/ui/Search.qml:136
+msgid "6 Months"
+msgstr "六个月"
+
+#: src/contents/ui/Search.qml:140
+msgid "One Year"
+msgstr "一年"
+
+#: src/contents/ui/Search.qml:144
+msgid "Indicate Date"
+msgstr "指定日期"
+
+#: src/contents/ui/Search.qml:180
+msgid "Limited search by popularity"
+msgstr "热门搜索受限"
+
+#: src/contents/ui/Newest.qml:14
+msgid "Newest 銉?%1"
+msgstr ""
+
+#: src/contents/ui/Series.qml:16
+msgid "Series 銉?%1"
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:143
+msgid "Welcome to piki"
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:160
+msgid ""
+"Illustrations, manga, and novels.\n"
+"You can find them all on pixiv."
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:177
+msgid ""
+"Here, you are bound to find\n"
+"something you like."
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:187
+msgid "Find something you like"
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:190
+msgid "Login"
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:209
+msgid "Skip"
+msgstr ""
+
+#: src/contents/ui/Welcome.qml:221
+msgid "Next"
+msgstr ""
+
+#: src/contents/ui/Collection.qml:15
+msgid "Bookmarks 銉?%1"
+msgstr ""
+
+#: src/contents/ui/Collection.qml:73 src/contents/ui/Following.qml:58
+msgid "All"
+msgstr ""
+
+#: src/contents/ui/Collection.qml:75
+msgid "Uncategorized"
+msgstr ""
+
+#: src/contents/ui/Collection.qml:90
+msgid "Public"
+msgstr ""
+
+#: src/contents/ui/Main.qml:15
+msgid "Piki"
+msgstr ""
+
+#: src/contents/ui/Main.qml:142
+msgid "Copied to clipoboard!"
+msgstr "已复制到剪贴板！"
+
+#: src/contents/ui/Following.qml:14
+msgid "Following 銉?%1"
+msgstr ""
+
+#: src/contents/ui/Following.qml:44
+msgid "Illustrations / Manga"
+msgstr ""
+
+#: src/contents/ui/Following.qml:62
+msgid "Public only"
+msgstr ""
+
+#: src/contents/ui/Following.qml:66
+msgid "Private only"
+msgstr ""
+
+#: src/contents/ui/Watchlist.qml:16
+msgid "Watchlist 銉?%1"
+msgstr ""
+
+#: src/main.cpp:64
+msgctxt "@title"
+msgid "Piki"
+msgstr ""
+
+#: src/main.cpp:68
+msgid "Application Description"
+msgstr ""
+
+#: src/main.cpp:72
+msgid "(c) 2025"
+msgstr ""
+
+#: src/main.cpp:73
+msgctxt "@info:credit"
+msgid "Micro"
+msgstr ""
+
+#: src/main.cpp:74
+msgctxt "@info:credit"
+msgid "Maintainer"
+msgstr ""
+
+#: src/main.cpp:78
+msgctxt "@info:translator"
+msgid "Micro"
+msgstr ""
+
+#: src/main.cpp:78
+msgctxt "@info:translator"
+msgid "microgamercz@proton.me"
+msgstr ""

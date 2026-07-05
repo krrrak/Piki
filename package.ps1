@@ -77,7 +77,10 @@ Get-ChildItem $QmlDir -Directory | ForEach-Object {
 }
 Copy-Item -Recurse "$ScriptDir/$BuildDir/io/github/micro/piki" "$DistDir/qml/io/github/micro/piki" -Force
 
-Write-Host "=== Step 5: qt.conf ==="
+Write-Host "=== Step 5: Copy locale (translations) ==="
+Copy-Item -Recurse "$ScriptDir/$BuildDir/locale" "$DistDir/" -Force
+
+Write-Host "=== Step 6: qt.conf ==="
 @"
 [Paths]
 Prefix = .
