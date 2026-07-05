@@ -106,6 +106,7 @@ Item {
                 icon.width: 24
                 icon.height: 24
                 flat: true
+                display: Controls.AbstractButton.IconOnly
                 implicitWidth: 40
                 implicitHeight: 40
                 enabled: root._navIndex > 0 && !root.fullscreenActive
@@ -139,6 +140,7 @@ Item {
             icon.width: 24
             icon.height: 24
             flat: true
+            display: Controls.AbstractButton.IconOnly
             implicitWidth: 40
             implicitHeight: 40
             anchors {
