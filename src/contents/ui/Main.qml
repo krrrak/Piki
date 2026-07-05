@@ -21,6 +21,7 @@ Kirigami.ApplicationWindow {
     property string currentPage: pageStack.currentItem?.title ?? ""
     property var _navHistory: []
     property int _navIndex: -1
+    property bool fullscreenActive: false
 
     function buildObject(name, data, parent) {
         let comp = Qt.createComponent(name + ".qml");
@@ -132,6 +133,42 @@ Kirigami.ApplicationWindow {
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
     pageStack.columnView.interactive: false
     pageStack.initialPage: Loading {}
+
+    function showFullscreen(metaPages, metaSinglePage, pageCount) {
+        if (root.fullscreenActive)
+            return;
+        root.fullscreenActive = true;
+
+        let comp = Qt.createComponent("FullscreenView.qml");
+        let create = function() {
+            let item = comp.createObject(root, {
+                z: 999,
+                metaPages: metaPages,
+                metaSinglePage: metaSinglePage,
+                pageCount: pageCount
+            });
+            if (!item) {
+                root.fullscreenActive = false;
+                return;
+            }
+            item.x = 0;
+            item.y = root.header.height;
+            item.width = Qt.binding(function() { return root.width; });
+            item.height = Qt.binding(function() { return root.height - root.header.height; });
+            item.onClose = function() { root.fullscreenActive = false; };
+        };
+        if (comp.status === Component.Ready)
+            create();
+        else if (comp.status === Component.Error)
+            root.fullscreenActive = false;
+        else
+            comp.statusChanged.connect(function() {
+                if (comp.status === Component.Ready)
+                    create();
+                else if (comp.status === Component.Error)
+                    root.fullscreenActive = false;
+            });
+    }
 
     Kirigami.Dialog {
         id: shareDialog

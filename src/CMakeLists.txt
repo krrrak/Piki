@@ -25,6 +25,7 @@ ecm_add_qml_module(piki_st
         # contents/ui/NovelView.qml # Temporarily removed - requires QtWebEngine
         contents/ui/Watchlist.qml
         contents/ui/Series.qml
+        contents/ui/FullscreenView.qml
 
         contents/controls/Header.qml
         contents/controls/Sidebar.qml

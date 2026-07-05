@@ -108,7 +108,7 @@ Item {
                 flat: true
                 implicitWidth: 40
                 implicitHeight: 40
-                enabled: root._navIndex > 0
+                enabled: root._navIndex > 0 && !root.fullscreenActive
                 onClicked: root.goBack()
             }
             Controls.Label {
@@ -131,7 +131,7 @@ Item {
                 verticalCenter: parent.verticalCenter
                 rightMargin: 15
             }
-            enabled: root._navIndex < root._navHistory.length - 1
+            enabled: root._navIndex < root._navHistory.length - 1 && !root.fullscreenActive
             onClicked: root.goForward()
         }
 
