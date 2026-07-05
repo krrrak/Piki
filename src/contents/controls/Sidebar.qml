@@ -23,7 +23,7 @@ Rectangle {
     property bool collapsed: true
 
     Behavior on width {
-        SmoothedAnimation { velocity: 1000 }
+        NumberAnimation { easing.type: Easing.OutCubic; duration: 200 }
     }
 
     function switchAccount(data) {

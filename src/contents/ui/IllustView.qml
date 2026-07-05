@@ -68,7 +68,6 @@ Kirigami.Page {
     Controls.SplitView {
         id: view
         anchors.fill: parent
-        clip: true
 
         Item {
             Controls.SplitView.minimumWidth: page.width * 0.425
