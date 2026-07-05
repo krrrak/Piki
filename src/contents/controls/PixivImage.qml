@@ -9,7 +9,7 @@ Image {
     asynchronous: true
     retainWhileLoading: true
     Controls.ProgressBar {
-        z: 1
+        z: -1
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
