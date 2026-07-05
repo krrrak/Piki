@@ -110,12 +110,6 @@ Item {
                 implicitHeight: 40
                 enabled: root._navIndex > 0 && !root.fullscreenActive
                 onClicked: root.goBack()
-                background: Rectangle {
-                    color: "transparent"
-                    border.width: parent.hovered ? 1.5 : 0
-                    border.color: parent.hovered ? Kirigami.Theme.highlightColor : "transparent"
-                    radius: 4
-                }
             }
             Controls.Label {
                 id: headerLabel
@@ -154,12 +148,6 @@ Item {
             }
             enabled: root._navIndex < root._navHistory.length - 1 && !root.fullscreenActive
             onClicked: root.goForward()
-            background: Rectangle {
-                color: "transparent"
-                border.width: parent.hovered ? 1.5 : 0
-                border.color: parent.hovered ? Kirigami.Theme.highlightColor : "transparent"
-                radius: 4
-            }
         }
 
         Kirigami.AbstractCard {
