@@ -30,9 +30,6 @@ Kirigami.ApplicationWindow {
         return _compCache[name].createObject(parent, data);
     }
     function navigateToPageParm(name, data) {
-        // Trim forward pages before pushing new one
-        while (pageStack.currentIndex < pageStack.depth - 1)
-            pageStack.pop();
         pageStack.push(buildObject(name, data, this));
     }
     function navigateToFeed(name, data) {
