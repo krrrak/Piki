@@ -58,7 +58,7 @@ Write-Host "=== Step 3: Copy KF6/Piqi/QCoro DLLs ==="
 $dlls = @(
     "libKF6I18nQml.dll","libKF6I18n.dll","libKF6BreezeIcons.dll",
     "libKF6CoreAddons.dll","libKF6ConfigGui.dll","libKF6ConfigCore.dll",
-    "libKF6Purpose.dll","libKF6ConfigQml.dll","libKF6I18nLocaleData.dll",
+    "libKF6Purpose.dll","libKF6PurposeWidgets.dll","libKF6ConfigQml.dll","libKF6I18nLocaleData.dll",
     "libKF6WindowSystem.dll","libKF6Service.dll",
     "libKirigamiPlatform.dll","libKirigami.dll","libKirigamiControls.dll",
     "libKirigamiDelegates.dll","libKirigamiDialogs.dll","libKirigamiLayouts.dll",
@@ -80,7 +80,13 @@ Copy-Item -Recurse "$ScriptDir/$BuildDir/io/github/micro/piki" "$DistDir/qml/io/
 Write-Host "=== Step 5: Copy locale (translations) ==="
 Copy-Item -Recurse "$ScriptDir/$BuildDir/locale" "$DistDir/" -Force
 
-Write-Host "=== Step 6: qt.conf ==="
+Write-Host "=== Step 6: Copy Purpose plugin data ==="
+$purposeData = "$Msys2Root/$MsysEnv/bin/data/kf6/purpose"
+if (Test-Path $purposeData) {
+    Copy-Item -Recurse $purposeData "$DistDir/data/kf6/purpose" -Force
+}
+
+Write-Host "=== Step 7: qt.conf ==="
 @"
 [Paths]
 Prefix = .
