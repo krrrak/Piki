@@ -23,10 +23,13 @@ Kirigami.ApplicationWindow {
     property int _navIndex: -1
     property bool fullscreenActive: false
 
+    property var _compCache: ({})
+
     function buildObject(name, data, parent) {
-        let comp = Qt.createComponent(name + ".qml");
-        let obj = comp.createObject(parent, data);
-        return obj;
+        if (!_compCache[name]) {
+            _compCache[name] = Qt.createComponent(name + ".qml", Component.PreferSynchronous);
+        }
+        return _compCache[name].createObject(parent, data);
     }
     function navigateToPageParm(name, data) {
         if (_navIndex < _navHistory.length - 1)
