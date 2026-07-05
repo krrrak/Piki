@@ -188,7 +188,11 @@ Kirigami.ApplicationWindow {
             return;
         root.fullscreenActive = true;
 
-        let comp = Qt.createComponent("FullscreenView.qml");
+        let comp = _compCache["FullscreenView"];
+        if (!comp) {
+            comp = Qt.createComponent("FullscreenView.qml", Component.PreferSynchronous);
+            _compCache["FullscreenView"] = comp;
+        }
         let create = function() {
             let item = comp.createObject(root, {
                 z: 999,
@@ -205,6 +209,9 @@ Kirigami.ApplicationWindow {
             item.width = Qt.binding(function() { return root.width; });
             item.height = Qt.binding(function() { return root.height - root.header.height; });
             item.onClose = function() { root.fullscreenActive = false; };
+            _pagesCreated++;
+            _pagesAlive++;
+            item.destroyed.connect(function() { _pagesDestroyed++; _pagesAlive--; console.log("[MEM] fullscreen destroyed | alive:", _pagesAlive); });
         };
         if (comp.status === Component.Ready)
             create();
