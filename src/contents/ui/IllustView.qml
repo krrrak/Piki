@@ -283,6 +283,8 @@ Kirigami.Page {
                     }
 
                     GridView {
+                        reuseItems: true
+                        cacheBuffer: 800
                         Layout.fillWidth: true
                         Layout.preferredHeight: contentHeight
                         cellWidth: 175 + Kirigami.Units.gridUnit

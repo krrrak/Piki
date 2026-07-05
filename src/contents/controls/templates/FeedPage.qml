@@ -71,6 +71,9 @@ Kirigami.ScrollablePage {
     GridView {
         id: gv
 
+        reuseItems: true
+        cacheBuffer: 800
+
         leftMargin: Kirigami.Units.gridUnit
         rightMargin: Kirigami.Units.gridUnit
         topMargin: Kirigami.Units.gridUnit
