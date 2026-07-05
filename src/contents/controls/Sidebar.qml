@@ -22,6 +22,8 @@ Rectangle {
     readonly property string currentPage: root.currentPage
     property bool collapsed: true
 
+    property int layoutWidth: collapsed ? 60 : 250
+
     Behavior on width {
         NumberAnimation { easing.type: Easing.OutCubic; duration: 200 }
     }
