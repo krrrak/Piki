@@ -101,8 +101,11 @@ Item {
             }
             spacing: 2
 
-            Kirigami.NavigationTabButton {
+            Controls.ToolButton {
                 icon.name: "go-previous"
+                icon.width: 24
+                icon.height: 24
+                flat: true
                 implicitWidth: 40
                 implicitHeight: 40
                 enabled: root._navIndex > 0 && !root.fullscreenActive
@@ -130,9 +133,12 @@ Item {
             color: Kirigami.Theme.textColor
         }
 
-        Kirigami.NavigationTabButton {
+        Controls.ToolButton {
             id: forwardBtn
             icon.name: "go-next"
+            icon.width: 24
+            icon.height: 24
+            flat: true
             implicitWidth: 40
             implicitHeight: 40
             anchors {
