@@ -44,13 +44,10 @@ Kirigami.ApplicationWindow {
     function navigateToPageParm(name, data) {
         let oldIdx = pageStack.currentIndex;
         while (pageStack.depth > oldIdx + 1) {
-            pageStack.currentIndex = pageStack.depth - 1;
-            let doomed = pageStack.currentItem;
-            pageStack.pop();
-            if (doomed) {
-                _logDestroy(doomed.title || "?");
-                doomed.destroy();
-            }
+            let doomed = pageStack.get(pageStack.depth - 1);
+            pageStack.removeItem(doomed);
+            _logDestroy(doomed.title || "?");
+            doomed.destroy();
         }
         pageStack.push(buildObject(name, data, this));
     }
