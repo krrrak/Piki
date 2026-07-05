@@ -34,7 +34,9 @@ Kirigami.AbstractCard {
         }
         Controls.Button {
             Layout.fillWidth: true
-            text: (page.illust.user.isFollowed > 0) ? i18n("Following") : i18n("Follow")
+            checkable: true
+            checked: page.illust.user.isFollowed > 0
+            text: checked ? i18n("Following") : i18n("Follow")
             icon.name: (page.illust.user.isFollowed == 2) ? "view-private" : ""
             onClicked: {
                 if (page.illust.user.isFollowed == 0)
