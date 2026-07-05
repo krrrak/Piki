@@ -43,13 +43,15 @@ Kirigami.ApplicationWindow {
     }
     function navigateToPageParm(name, data) {
         let oldIdx = pageStack.currentIndex;
-        while (pageStack.depth > oldIdx + 1) {
-            let doomed = pageStack.get(pageStack.depth - 1);
-            pageStack.removeItem(doomed);
-            _logDestroy(doomed.title || "?");
-            doomed.destroy();
+        let doomed = [];
+        for (let i = pageStack.depth - 1; i > oldIdx; i--) {
+            doomed.push(pageStack.get(i));
         }
         pageStack.push(buildObject(name, data, this));
+        for (let i = 0; i < doomed.length; i++) {
+            _logDestroy(doomed[i].title || "?");
+            doomed[i].destroy();
+        }
     }
     function navigateToFeed(name, data) {
         for (let i = pageStack.depth - 1; i >= 0; i--) {
