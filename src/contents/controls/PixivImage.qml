@@ -19,13 +19,10 @@ Image {
         Column {
             anchors.centerIn: parent
             spacing: Kirigami.Units.smallSpacing
-            width: px.width * 0.6
 
-            Controls.ProgressBar {
-                width: parent.width
-                from: 0
-                to: 1
-                value: px.progress
+            Controls.BusyIndicator {
+                anchors.horizontalCenter: parent.horizontalCenter
+                running: true
             }
 
             Controls.Label {
