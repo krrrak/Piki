@@ -24,7 +24,7 @@ msgstr "首页"
 #: src/contents/ui/ProfileView.qml:167 src/contents/ui/ProfileView.qml:199
 #: src/contents/ui/Settings.qml:115
 msgid "Following"
-msgstr "关注"
+msgstr "已关注"
 
 #: src/contents/controls/Sidebar.qml:123 src/contents/ui/Settings.qml:119
 msgid "Watchlist"
