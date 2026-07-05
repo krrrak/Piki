@@ -78,7 +78,6 @@ Kirigami.Page {
                 id: mainImage
                 visible: page.illust.pageCount == 1
                 source: illust.metaSinglePage
-                sourceSize: Qt.size(width, height)
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectFit
             }
@@ -95,7 +94,6 @@ Kirigami.Page {
                 delegate: PixivImage {
                     required property var modelData
                     source: modelData.original
-                    sourceSize: Qt.size(ListView.view.width, ListView.view.height)
                     fillMode: Image.PreserveAspectFit
                     width: ListView.view.width
                     height: ListView.view.height
