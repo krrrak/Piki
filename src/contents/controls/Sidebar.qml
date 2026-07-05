@@ -82,8 +82,18 @@ Rectangle {
             implicitHeight: 44
             flat: true
             display: Controls.AbstractButton.IconOnly
-            onClicked: sidebar.collapsed = !sidebar.collapsed
+            onClicked: {
+                root.sidebarAnimating = true;
+                animTimer.start();
+                sidebar.collapsed = !sidebar.collapsed;
+            }
             icon.name: sidebar.collapsed ? "go-next" : "go-previous"
+        }
+
+        Timer {
+            id: animTimer
+            interval: 220
+            onTriggered: root.sidebarAnimating = false
         }
         Kirigami.Separator {
             Layout.fillWidth: true
