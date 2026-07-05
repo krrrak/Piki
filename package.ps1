@@ -100,7 +100,7 @@ Plugins = .
 Qml2Imports = qml
 "@ | Out-File -FilePath "$DistDir/qt.conf" -Encoding ASCII
 
-Write-Host "=== Step 6: Create 7z archive ==="
+Write-Host "=== Step 8: Create 7z archive ==="
 $archive = "$ScriptDir/$OutDir/Piki-windows-arm64.7z"
 Remove-Item $archive -Force -ErrorAction SilentlyContinue
 
