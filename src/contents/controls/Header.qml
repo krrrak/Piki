@@ -105,12 +105,15 @@ Item {
                 icon.name: "go-previous"
                 icon.width: 24
                 icon.height: 24
+                flat: true
                 implicitWidth: 40
                 implicitHeight: 40
                 enabled: root._navIndex > 0 && !root.fullscreenActive
                 onClicked: root.goBack()
                 background: Rectangle {
-                    color: parent.hovered ? Kirigami.Theme.hoverColor : "transparent"
+                    color: "transparent"
+                    border.width: parent.hovered ? 1.5 : 0
+                    border.color: parent.hovered ? Kirigami.Theme.highlightColor : "transparent"
                     radius: 4
                 }
             }
@@ -141,6 +144,7 @@ Item {
             icon.name: "go-next"
             icon.width: 24
             icon.height: 24
+            flat: true
             implicitWidth: 40
             implicitHeight: 40
             anchors {
@@ -151,7 +155,9 @@ Item {
             enabled: root._navIndex < root._navHistory.length - 1 && !root.fullscreenActive
             onClicked: root.goForward()
             background: Rectangle {
-                color: parent.hovered ? Kirigami.Theme.hoverColor : "transparent"
+                color: "transparent"
+                border.width: parent.hovered ? 1.5 : 0
+                border.color: parent.hovered ? Kirigami.Theme.highlightColor : "transparent"
                 radius: 4
             }
         }
