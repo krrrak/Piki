@@ -23,6 +23,7 @@ Kirigami.ApplicationWindow {
     property int _pagesCreated: 0
     property int _pagesDestroyed: 0
     property int _pagesAlive: 0
+    property bool debugVisible: true
 
     property var _compCache: ({})
 
@@ -157,6 +158,7 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: Loading {}
 
     Rectangle {
+        visible: debugVisible
         z: 1000
         anchors { right: parent.right; bottom: parent.bottom; margins: 10 }
         width: 260; height: 160

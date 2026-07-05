@@ -201,6 +201,20 @@ FormCard.FormCardPage {
         }
     }
 
+    FormCard.FormHeader {
+        maximumWidth: Kirigami.Units.gridUnit * 50
+        title: "Debug"
+    }
+    FormCard.FormCard {
+        maximumWidth: Kirigami.Units.gridUnit * 50
+
+        FormCard.FormSwitchDelegate {
+            text: "Memory tracking overlay"
+            checked: root.debugVisible
+            onToggled: root.debugVisible = checked
+        }
+    }
+
     Kirigami.Dialog {
         id: aboutPikiDialog
         width: Kirigami.Units.gridUnit * 30
