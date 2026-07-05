@@ -157,6 +157,33 @@ Kirigami.ApplicationWindow {
     pageStack.columnView.interactive: false
     pageStack.initialPage: Loading {}
 
+    Rectangle {
+        z: 1000
+        anchors { right: parent.right; bottom: parent.bottom; margins: 10 }
+        width: 260; height: 160
+        color: "#CC000000"
+        radius: 6
+
+        Column {
+            anchors { fill: parent; margins: 8 }
+            spacing: 4
+
+            Text { text: "[MEM DEBUG]"; color: "#FF0"; font.bold: true; font.pointSize: 10 }
+            Text { color: "white"; font.pointSize: 9
+                text: "created: " + _pagesCreated + "  destroyed: " + _pagesDestroyed + "  alive: " + _pagesAlive
+            }
+            Text { color: "white"; font.pointSize: 9
+                text: "stack depth: " + pageStack.depth + "  current idx: " + pageStack.currentIndex
+            }
+            Text { color: "white"; font.pointSize: 9
+                text: "current page: " + (pageStack.currentItem?.title ?? "none")
+            }
+            Text { color: "#AAA"; font.pointSize: 8
+                text: "component cache: " + Object.keys(_compCache).length
+            }
+        }
+    }
+
     function showFullscreen(metaPages, metaSinglePage, pageCount) {
         if (root.fullscreenActive)
             return;
