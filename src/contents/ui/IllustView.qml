@@ -283,8 +283,6 @@ Kirigami.Page {
                     }
 
                     GridView {
-                        opacity: root.sidebarAnimating ? 0 : 1
-                        Behavior on opacity { NumberAnimation { duration: 100 } }
                         Layout.fillWidth: true
                         Layout.preferredHeight: contentHeight
                         cellWidth: 175 + Kirigami.Units.gridUnit

@@ -22,7 +22,6 @@ Kirigami.ApplicationWindow {
     property var _navHistory: []
     property int _navIndex: -1
     property bool fullscreenActive: false
-    property bool sidebarAnimating: false
 
     function buildObject(name, data, parent) {
         let comp = Qt.createComponent(name + ".qml");
