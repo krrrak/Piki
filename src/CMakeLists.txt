@@ -51,6 +51,7 @@ ecm_add_qml_module(piki_st
 
         contents/controls/templates/DoubleAbstractCard.qml
         contents/controls/templates/FeedPage.qml
+        contents/ui/Debug.qml
     SOURCES
         imagedownloader.cpp
         loginprocessor.cpp
