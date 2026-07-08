@@ -1,6 +1,5 @@
 import QtQuick
 Item {
-    id: debugRoot
     property bool debugVisible: false
 
     property int _lastDepth: 0

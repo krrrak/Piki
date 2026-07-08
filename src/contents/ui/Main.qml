@@ -22,7 +22,7 @@ Kirigami.ApplicationWindow {
     property bool fullscreenActive: false
 
     property var _compCache: ({})
-    property bool debugVisible: false
+    property Item debugOverlay:debugOverlay
 
     function buildObject(name, data, parent) {
         if (!_compCache[name]) {
@@ -140,9 +140,7 @@ Kirigami.ApplicationWindow {
     }
 
     Debug {
-        id: debugOverlayItem
-        debugVisible: root.debugVisible
-        z: 999
+        id: debugOverlay
         width: parent.width
         height: parent.height
     }

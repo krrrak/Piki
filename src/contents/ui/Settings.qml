@@ -210,8 +210,8 @@ FormCard.FormCardPage {
 
         FormCard.FormSwitchDelegate {
             text: "Memory tracking overlay"
-            checked: root.debugVisible
-            onToggled: root.debugVisible = checked
+            checked: root.debugOverlay.debugVisible
+            onToggled: root.debugOverlay.debugVisible = checked
         }
     }
 
